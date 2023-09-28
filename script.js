@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cell = document.createElement("div");
     cell.classList.add("cell");
     cell.textContent = currentPlayer;
-    board.appendChild(cell);
+    board.replaceChild(cell, board.children[index]);
 
     const winner = checkWinner();
     if (winner) {
